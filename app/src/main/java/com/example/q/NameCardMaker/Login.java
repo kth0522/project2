@@ -124,6 +124,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 // App code
+                Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(myIntent);
             }
 
             @Override
@@ -144,6 +146,8 @@ public class Login extends AppCompatActivity {
                 new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
+                        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(myIntent);
                     }
 
                     @Override
@@ -170,7 +174,7 @@ public class Login extends AppCompatActivity {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
-
+//facebook 끝
     public void init(){
         retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
     }
