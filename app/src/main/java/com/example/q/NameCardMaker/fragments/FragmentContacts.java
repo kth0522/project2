@@ -101,7 +101,7 @@ public class FragmentContacts extends Fragment {
         ContentResolver contentResolver = getContext().getContentResolver();
         Cursor cursor = contentResolver.query(CONTENT_URI, null, null, null, DISPLAY_NAME);
 
-        InputStream photo = null;
+
         String name = null;
         String mobile_num = null;
         String home_num = null;
@@ -112,7 +112,7 @@ public class FragmentContacts extends Fragment {
                 Long contact_id_long = cursor.getLong(cursor.getColumnIndex(ID));
 
                 Uri uri = ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, contact_id_long);
-                photo = ContactsContract.Contacts.openContactPhotoInputStream(contentResolver, uri);
+
 
                 name = cursor.getString(cursor.getColumnIndex(DISPLAY_NAME));
 
@@ -146,7 +146,7 @@ public class FragmentContacts extends Fragment {
                     }
                     emailCursor.close();
                 }
-                list.add(new ModelContacts(photo, name, mobile_num, home_num, email));
+                list.add(new ModelContacts(name, mobile_num, home_num, email));
             }
         }
         return list;

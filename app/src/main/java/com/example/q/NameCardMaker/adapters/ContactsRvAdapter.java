@@ -54,14 +54,6 @@ public class ContactsRvAdapter extends RecyclerView.Adapter<ContactsRvAdapter.Vi
         contact_number = holder.contact_number;
         contact_photo = holder.contact_photo;
 
-        Bitmap photo = BitmapFactory.decodeStream(mListContacts.get(position).getPhoto());
-        if(photo !=null){
-            contact_photo.setImageBitmap(photo);
-        }
-        if(Build.VERSION.SDK_INT >= 21) {
-            contact_photo.setBackground(new ShapeDrawable(new OvalShape()));
-            contact_photo.setClipToOutline(true);
-        }
 
         contact_name.setText(mListContacts.get(position).getName());
         if(mListContacts.get(position).getMobile_num()!=null){

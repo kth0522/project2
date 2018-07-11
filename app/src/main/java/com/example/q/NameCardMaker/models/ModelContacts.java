@@ -7,22 +7,17 @@ import java.io.InputStream;
 import java.io.Serializable;
 
 public class ModelContacts implements Serializable {
-    InputStream photo;
+
     private String name, mobile_num, home_num, email;
 
-    public ModelContacts(InputStream photo, String name, String mobile_number, String home_num, String email) {
-        this.photo = photo;
+    public ModelContacts(String name, String mobile_number, String home_num, String email) {
+
         this.name = name;
         this.mobile_num = mobile_number;
         this.home_num = home_num;
         this.email = email;
     }
-    public InputStream getPhoto(){
-        return photo;
-    }
-    public void setPhoto(InputStream photo) {
-        this.photo = photo;
-    }
+
 
     public String getName() {
         return name;
