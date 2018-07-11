@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/big_fav"
+    >
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+
+        android:rotation="90" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="131dp"
+        android:fontFamily="@font/ablackb"
+        android:rotation="90"
+        android:text="name"
+        android:textColor="@android:color/black"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="324dp"
+        android:layout_height="83dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="-20dp"
+        android:fontFamily="@font/ablackm"
+        android:rotation="90"
+        android:text="010-2222-2222"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:transformPivotY="40dp"
+        android:transformPivotX="-10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/icon"
+        android:rotation="90"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/icon"
+        android:layout_alignLeft="@+id/icon"
+        android:layout_marginBottom="18dp"
+        android:text="저장" />
+
+
+</RelativeLayout>

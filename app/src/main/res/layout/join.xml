@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:textColorHint="#6E6E6E"
+        android:textColor="#F2F2F2"
+        android:id="@+id/joinEmail"
+        android:hint="Email"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:ems="10"
+        android:textColorHint="#6E6E6E"
+        android:textColor="#F2F2F2"
+        android:id="@+id/joinPassword"
+        android:layout_below="@+id/joinEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password Check"
+        android:textColorHint="#6E6E6E"
+        android:textColor="#F2F2F2"
+        android:ems="10"
+        android:id="@+id/checkPassword"
+        android:layout_below="@+id/joinPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+
+
+    <Button
+        android:id="@+id/jBtnJoin"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/checkPassword"
+        android:layout_marginTop="10dp"
+        android:text="join" />
+
+
+</RelativeLayout>
