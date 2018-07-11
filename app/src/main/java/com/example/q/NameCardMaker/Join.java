@@ -1,6 +1,7 @@
 package com.example.q.NameCardMaker;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -81,6 +82,8 @@ public class Join extends AppCompatActivity {
                             @Override
                             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                                 Toast.makeText(Join.this, "성공적으로 가입되었습니다", Toast.LENGTH_SHORT).show();
+                                Intent myIntent = new Intent(getApplicationContext(), Login.class);
+                                startActivity(myIntent);
                             }
 
                             @Override
